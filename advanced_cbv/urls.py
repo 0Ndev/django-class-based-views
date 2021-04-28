@@ -4,7 +4,9 @@ from django.conf.urls import url, include
 from basic_app import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view()),
+    # url(r'^$', views.CBView.as_view()),
+    # url(r'^$', views.index, name='index'),
     # url(r'^basic_app/', include('basic_app.urls')),
     path('admin/', admin.site.urls),
 ]
